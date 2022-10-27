@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ia.householdfinancesmanager.SettingsMenuController">
+   <children>
+      <Button layoutX="36.0" layoutY="353.0" mnemonicParsing="false" onAction="#backToMain" text="Back" />
+      <Pane layoutX="200.0" layoutY="228.0" prefHeight="179.0" prefWidth="200.0" />
+      <TitledPane animated="false" collapsible="false" layoutX="56.0" layoutY="30.0" text="Edit saved values (people, types, shops)" textAlignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ComboBox fx:id="typeCBox" layoutX="37.0" layoutY="28.0" onAction="#initValuesCBox" prefWidth="150.0" />
+                  <ComboBox fx:id="valuesCBox" editable="true" layoutX="37.0" layoutY="78.0" prefWidth="150.0" />
+                  <Button layoutX="37.0" layoutY="128.0" mnemonicParsing="false" onAction="#add" prefWidth="60.0" text="Add">
+                     <tooltip>
+                        <Tooltip text="Enter the value you want to add and press Add" />
+                     </tooltip></Button>
+                  <Button layoutX="127.0" layoutY="128.0" mnemonicParsing="false" onAction="#remove" prefWidth="60.0" text="Remove" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="345.0" layoutY="30.0" text="Edit presets">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="25.0" layoutY="108.0" mnemonicParsing="false" onAction="#addPreset" prefWidth="60.0" text="Add" />
+                  <Button layoutX="115.0" layoutY="108.0" mnemonicParsing="false" onAction="#removePreset" prefWidth="60.0" text="Remove" />
+                  <ComboBox fx:id="presetCBox" layoutX="25.0" layoutY="48.0" prefHeight="25.0" prefWidth="150.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="112.0" layoutY="280.0" prefHeight="76.0" prefWidth="435.0" text="Reset values">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="450.0">
+               <children>
+                  <Button layoutX="290.0" layoutY="13.0" mnemonicParsing="false" onAction="#resetPresets" prefWidth="130.0" text="Reset all presets" />
+                  <Button layoutX="150.0" layoutY="13.0" mnemonicParsing="false" onAction="#resetSavedValues" prefWidth="130.0" text="Reset all saved values" />
+                  <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#resetTransactions" prefWidth="130.0" text="Reset all transactions" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>
